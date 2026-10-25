@@ -43,14 +43,15 @@ stateDiagram-v2
 ```
 
 ### 3.1. Requisitos Obrigatórios do Registro Clínico
-Nenhum medicamento ou interação pode ser inserido em [`pharma-data/interacoes-medicamentosas-criticas.json`](../pharma-data/interacoes-medicamentosas-criticas.json) sem conter todos os 7 campos obrigatórios:
+Nenhum medicamento ou interação pode ser inserido em [`pharma-data/interacoes-medicamentosas-criticas.json`](../pharma-data/interacoes-medicamentosas-criticas.json) sem conter todos os 8 campos estruturais obrigatórios do schema homologado:
 1. `interaction_id`: Código único rastreável (`INT-DCB-XXX`);
-2. `substance_a_dcb` e `substance_b_dcb`: Nomenclatura estrita conforme lista atualizada da **DCB/Anvisa** (com correspondente DCI internacional);
-3. `therapeutic_classes`: Classes farmacológicas envolvidas;
-4. `severity`: Classificação padronizada (`LEVE`, `MODERADA`, `ALTA`, `CONTRAINDICADA`);
-5. `pharmacological_mechanism`: Descrição clara da farmacocinética ou farmacodinâmica (ex: inibição de CYP2C9, sinergismo anticoagulante);
-6. `recommended_conduct`: Orientação objetiva para o profissional de saúde;
-7. `requires_human_pharmacist_signoff`: Booleano obrigatório (`true` para toda interação `ALTA` ou `CONTRAINDICADA`).
+2. `substance_a` e `substance_b`: Objetos contendo obrigatoriamente `dcb_name` (nomenclatura oficial **DCB/Anvisa**), `dci_name` (correspondente internacional **DCI/OMS**) e `therapeutic_class` (classe farmacológica);
+3. `severity`: Classificação padronizada (`LEVE`, `MODERADA`, `ALTA`, `CONTRAINDICADA`);
+4. `requires_human_pharmacist_signoff`: Booleano obrigatório (`true` para toda interação `ALTA` ou `CONTRAINDICADA`);
+5. `pharmacological_mechanism`: Descrição clara da farmacocinética ou farmacodinâmica (ex: inibição de CYP3A4/CYP2D6, sinergismo anticoagulante);
+6. `clinical_effect`: Desfecho clínico adverso esperado que justifica o alerta;
+7. `recommended_conduct`: Orientação objetiva de manejo clínico/farmacêutico para o profissional de saúde;
+8. `regulatory_source`: Fonte oficial de evidência (Bulário Eletrônico Anvisa, FTN/MS, Portaria SVS/MS 344/1998 ou diretriz clínica).
 
 ---
 
