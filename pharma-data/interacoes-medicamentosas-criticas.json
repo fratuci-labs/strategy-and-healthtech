@@ -1,0 +1,89 @@
+{
+  "dataset_metadata": {
+    "dataset_id": "FRATUCI-PHARMA-DCB-001",
+    "version": "1.2.0",
+    "last_updated": "2026-10-25",
+    "curated_by": "Adriana (Diretoria de Estratégia, Produto & Farmácia)",
+    "legal_audit_by": "André (Diretoria Jurídica & Compliance - LGPD)",
+    "standard_nomenclature": "DCB (Denominação Comum Brasileira - Anvisa) / DCI (OMS)",
+    "pop_reference": "POP-ANVISA-001"
+  },
+  "critical_interactions": [
+    {
+      "interaction_id": "INT-DCB-001",
+      "substance_a": {
+        "dcb_name": "varfarina sódica",
+        "dci_name": "warfarin",
+        "therapeutic_class": "Anticoagulante Oral (Antagonista da Vitamina K)"
+      },
+      "substance_b": {
+        "dcb_name": "ácido acetilsalicílico",
+        "dci_name": "acetylsalicylic acid",
+        "therapeutic_class": "Anti-inflamatório Não Esteroidal (AINE) / Antiagregante Plaquetário"
+      },
+      "severity": "ALTA",
+      "requires_human_pharmacist_signoff": true,
+      "pharmacological_mechanism": "Sinergismo farmacodinâmico entre a inibição da cascata de coagulação dependente de vitamina K e a inibição irreversível da COX-1 plaquetária, somado ao dano potencial à mucosa gástrica.",
+      "clinical_effect": "Aumento expressivo do risco de hemorragia gastrointestinal severa e sangramentos sistêmicos.",
+      "recommended_conduct": "Evitar associação sem indicação cardiológica estrita. Monitorar RNI (Relação Normatizada Internacional) rigorosamente e orientar sinais de alerta de sangramento. Exige confirmação formal do Farmacêutico ou Médico prescritor.",
+      "regulatory_source": "Bulário Eletrônico Anvisa (RDC 47/2009) & Formulário Terapêutico Nacional (FTN/MS)"
+    },
+    {
+      "interaction_id": "INT-DCB-002",
+      "substance_a": {
+        "dcb_name": "sinvastatina",
+        "dci_name": "simvastatin",
+        "therapeutic_class": "Hipolipemiante (Inibidor da HMG-CoA Redutase / Estatina)"
+      },
+      "substance_b": {
+        "dcb_name": "claritromicina",
+        "dci_name": "clarithromycin",
+        "therapeutic_class": "Antibacteriano Macrolídeo"
+      },
+      "severity": "CONTRAINDICADA",
+      "requires_human_pharmacist_signoff": true,
+      "pharmacological_mechanism": "Inibição potente da isoenzima hepática e intestinal CYP3A4 pela claritromicina, elevando drasticamente a concentração plasmática (AUC) da sinvastatina ativa.",
+      "clinical_effect": "Risco elevado de miopatia grave e rabdomiólise com potencial insuficiência renal aguda.",
+      "recommended_conduct": "Associação contraindicada. Suspender temporariamente a sinvastatina durante o curso do macrolídeo ou contatar o prescritor para substituição do antimicrobiano/estatina não metabolizada prioritariamente via CYP3A4 (ex: rosuvastatina ou pravastatina, conforme avaliação médica).",
+      "regulatory_source": "Alerta de Farmacovigilância Anvisa & Bula Padrão Sinvastatina/Claritromicina"
+    },
+    {
+      "interaction_id": "INT-DCB-003",
+      "substance_a": {
+        "dcb_name": "fluoxetina",
+        "dci_name": "fluoxetine",
+        "therapeutic_class": "Antidepressivo (Inibidor Seletivo da Recaptação de Serotonina - ISRS)"
+      },
+      "substance_b": {
+        "dcb_name": "tramadol",
+        "dci_name": "tramadol",
+        "therapeutic_class": "Analgésico Opioide de Ação Central"
+      },
+      "severity": "ALTA",
+      "requires_human_pharmacist_signoff": true,
+      "pharmacological_mechanism": "Duplo mecanismo: (1) Soma de efeitos serotonérgicos no Sistema Nervoso Central; (2) Inibição potente da CYP2D6 pela fluoxetina, reduzindo a conversão do tramadol em seu metabólito ativo M1 (O-desmetiltramadol) e acumulando o fármaco-mãe.",
+      "clinical_effect": "Risco de Síndrome Serotonérgica (agitação, hipertermia, taquicardia, hiperreflexia), redução do limiar convulsivo e perda parcial da eficácia analgésica opioide.",
+      "recommended_conduct": "Requer intervenção farmacêutica junto ao prescritor para avaliar alternativa analgésica não serotonérgica. Caso mantida, monitorar sinais neurológicos nas primeiras 24-72h.",
+      "regulatory_source": "Bulário Eletrônico Anvisa (Portaria SVS/MS 344/1998) & Micromedex Clinical Evidence"
+    },
+    {
+      "interaction_id": "INT-DCB-004",
+      "substance_a": {
+        "dcb_name": "enalapril",
+        "dci_name": "enalapril",
+        "therapeutic_class": "Anti-hipertensivo (Inibidor da Enzima Conversora de Angiotensina - IECA)"
+      },
+      "substance_b": {
+        "dcb_name": "espironolactona",
+        "dci_name": "spironolactone",
+        "therapeutic_class": "Diurético Poupador de Potássio (Antagonista da Aldosterona)"
+      },
+      "severity": "MODERADA",
+      "requires_human_pharmacist_signoff": false,
+      "pharmacological_mechanism": "Efeito aditivo na redução da secreção de aldosterona e retenção tubular renal de íons potássio.",
+      "clinical_effect": "Risco de hipercalemia (especialmente em pacientes idosos, diabéticos ou com nefropatia prévia), podendo induzir arritmias cardíacas.",
+      "recommended_conduct": "Associação frequentemente intencional em Insuficiência Cardíaca, porém exige monitoramento periódico de potássio sérico e função renal (creatinina/TFG), além de orientar o paciente a evitar substitutos de sal ricos em potássio.",
+      "regulatory_source": "Diretriz Brasileira de Insuficiência Cardíaca (SBC) & Bulário Anvisa"
+    }
+  ]
+}
